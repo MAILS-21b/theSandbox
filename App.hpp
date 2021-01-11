@@ -1,11 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-
+#include <cstdio>
 #include <vector>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
+#include <cstring>
 class App
 {
 public:
@@ -18,7 +18,7 @@ public:
     ~App();
 
     //functions
-    int getNeighbor(int i); 
+    int getNeighbor(int i);
 private:
     sf::RenderWindow* renderWindow;
     bool running = false;
@@ -28,11 +28,8 @@ private:
 
     int windowWidth = 600, windowHeight = 600, pixelSize = 4;
     int arrLen = 0;
-
-    bool stateRenderVertex = true;
+    int x=0;
+    bool stateRenderVertex = false;
     bool paused = false;
-
-    sf::VertexArray sPixels;
-
-    std::vector<sf::RectangleShape> rects;
+    sf::CircleShape bruh;
 };

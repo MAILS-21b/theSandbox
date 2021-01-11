@@ -23,13 +23,6 @@ private:
     sf::RenderWindow* renderWindow;
     bool running = false;
 
-    int* currentState;
-    int* outputState;
-
     int windowWidth = 600, windowHeight = 600, pixelSize = 4;
     int arrLen = 0;
-    int x=0;
-    bool stateRenderVertex = false;
-    bool paused = false;
-    sf::CircleShape bruh;
 };

@@ -25,21 +25,17 @@ void App::start(int w,int h,const char* title)
 
 void App::init()
 {
-    bruh.setRadius(5);
+    
 }
 
 void App::update()
 {
-     bruh.setPosition(x,0);
-     x++;
+
 }
 
 void App::render()
 {
     renderWindow->clear(sf::Color(30,30,30,255));
-
-        renderWindow->draw(bruh);
-
 
     renderWindow->display();
 }

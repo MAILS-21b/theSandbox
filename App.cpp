@@ -52,28 +52,7 @@ void App::handleEvent(sf::Event ev)
     }
 }
 
-int App::getNeighbor(int index)
-{
-    int res = 0;
-    int x = index % (windowWidth / pixelSize);
-    int y = index / (windowWidth / pixelSize);
-    for(int i = y - 1; i <= y + 1; i++)
-    {
-        for(int j = x - 1; j <= x + 1; j++)
-        {
-            if(i >= 0 && i < windowHeight / pixelSize && j >= 0 && j < windowWidth / pixelSize)
-            {
-                res += currentState[i * (windowWidth / pixelSize) + j];
-            }
-
-        }
-    }
-    return res - currentState[index];
-}
-
 App::~App()
 {
-    delete currentState;
-    delete outputState;
     delete renderWindow;
 }
